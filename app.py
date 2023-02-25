@@ -80,26 +80,18 @@ def teste_imagens_pasto():
                             text = f"{result_class} {result_percent}%",
                             org = (x , y+5),
                             fontFace = cv.FONT_HERSHEY_PLAIN,
-                            fontScale = 0.7,
-                            color = (255, 0, 0),
+                            fontScale = 0.8,
+                            color = (255, 255, 0),
                             thickness = 1
                             )
             else:
                 pass
                 #cv.rectangle(pasto, (x, y), (x+alt, y+lar), (0,0,255), 1)
 
-        # cv.imshow("Pasto",pasto)
-        # cv.imshow("Roi",roi)
-        # cv.imshow("Pasto processado",pasto_process)
-        #cv.waitKey(0)
-        
-
-    #cv.drawContours(pasto, contornos, -1, (0,255,0), 2)
-
 
     cv.imshow("Pasto",pasto)
     cv.imshow("Pasto processado",pasto_process)
-    #cv.imshow("img", img)
+    cv.imwrite("Results/vacas-pasto.png", pasto)
     cv.waitKey(0)
 
 
